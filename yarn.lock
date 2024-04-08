@@ -367,6 +367,21 @@
   dependencies:
     mime "^3.0.0"
 
+"@csstools/cascade-layer-name-parser@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/@csstools/cascade-layer-name-parser/-/cascade-layer-name-parser-1.0.5.tgz"
+  integrity sha512-v/5ODKNBMfBl0us/WQjlfsvSlYxfZLhNMVIsuCPib2ulTwGKYbKJbwqw671+qH9Y4wvWVnu7LBChvml/wBKjFg==
+
+"@csstools/css-parser-algorithms@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/@csstools/css-parser-algorithms/-/css-parser-algorithms-2.3.2.tgz"
+  integrity sha512-sLYGdAdEY2x7TSw9FtmdaTrh2wFtRJO5VMbBrA8tEqEod7GEggFmxTSK9XqExib3yMuYNcvcTdCZIP6ukdjAIA==
+
+"@csstools/css-tokenizer@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/@csstools/css-tokenizer/-/css-tokenizer-2.2.1.tgz"
+  integrity sha512-Zmsf2f/CaEPWEVgw29odOj+WEVoiJy9s9NOv5GgNY9mZ1CZ7394By6wONrONrTsnNDv6F9hR02nvFihrGVGHBg==
+
 "@csstools/selector-specificity@^3.0.0":
   version "3.0.0"
   resolved "https://registry.npmjs.org/@csstools/selector-specificity/-/selector-specificity-3.0.0.tgz"
@@ -1123,6 +1138,7 @@
     micromatch "^4.0.5"
     pathe "^1.1.1"
     postcss "^8.4.31"
+    postcss-custom-properties "^13.3.2"
     postcss-nesting "^12.0.1"
     radix3 "^1.1.0"
     tailwind-config-viewer "^1.7.3"
@@ -6260,6 +6276,16 @@ postcss-convert-values@^6.1.0:
   integrity sha512-zx8IwP/ts9WvUM6NkVSkiU902QZL1bwPhaVaLynPtCsOTqp+ZKbNi+s6XJg3rfqpKGA/oc7Oxk5t8pOQJcwl/w==
   dependencies:
     browserslist "^4.23.0"
+    postcss-value-parser "^4.2.0"
+
+postcss-custom-properties@^13.3.2:
+  version "13.3.2"
+  resolved "https://registry.npmjs.org/postcss-custom-properties/-/postcss-custom-properties-13.3.2.tgz"
+  integrity sha512-2Coszybpo8lpLY24vy2CYv9AasiZ39/bs8Imv0pWMq55Gl8NWzfc24OAo3zIX7rc6uUJAqESnVOMZ6V6lpMjJA==
+  dependencies:
+    "@csstools/cascade-layer-name-parser" "^1.0.5"
+    "@csstools/css-parser-algorithms" "^2.3.2"
+    "@csstools/css-tokenizer" "^2.2.1"
     postcss-value-parser "^4.2.0"
 
 postcss-discard-comments@^6.0.2:
