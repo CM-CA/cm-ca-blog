@@ -15,7 +15,7 @@
     <div
       class="flex-1 border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-gray-700"
     ></div>
-    <UAvatar
+    <img
       :src="project.owner.avatar_url"
       :ui="{ rounded: 'rounded z-10 relative' }"
       size="md"
