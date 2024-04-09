@@ -1,25 +1,25 @@
 <template>
   <main class="min-h-screen">
-    <AppHeader class="mb-12" title="Projects" :description="description" />
+    <AppHeader class="mb-12" title="Proyectos" :description="description" />
     <div class="space-y-4">
       <AppProjectCard
         v-for="(project, id) in projects"
         :key="id"
         :project="project"
       />
+
     </div>
   </main>
 </template>
 
 <script setup>
 const description =
-  "I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.";
+  "Aunque hasta la fecha no he tenido la oportunidad de trabajar en una compañia IT, siempre me gustó crear pequeños programas y páginas web. Aquí dejaré un listado de mi github.";
 useSeoMeta({
-  title: "Projects | Fayaz Ahmed",
+  title: "Proyectos | Camilo M. Couselo Alonso",
   description,
 });
 
-const { data: projects } = await useAsyncData("projects-all", () =>
-  queryContent("/projects").find()
-);
+const { data: projects } = useFetch("https://api.github.com/users/cm-ca/repos");
+
 </script>

@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     class="flex items-end gap-4 group p-2 -m-2 rounded-lg"
-    :to="project.url"
+    :to="project.html_url"
     target="_blank"
     external
   >
@@ -10,12 +10,13 @@
         {{ project.name }}
       </h3>
       <p class="text-gray-400 text-sm">{{ project.description }}</p>
+      <p class="text-gray-400 text-sm">{{ project.html_url }}</p>
     </div>
     <div
       class="flex-1 border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-gray-700"
     ></div>
     <UAvatar
-      :src="project.thumbnail"
+      :src="project.owner.avatar_url"
       :ui="{ rounded: 'rounded z-10 relative' }"
       size="md"
       :alt="project.name"
@@ -28,6 +29,7 @@ defineProps({
   project: {
     type: Object,
     required: true,
-  },
+    },
 });
+
 </script>
