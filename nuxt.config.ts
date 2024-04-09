@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/content",
     "@nuxthq/studio",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
+    '@nuxtjs/i18n',
   ],
   ui: {
     icons: ["heroicons", "lucide"],
@@ -16,6 +17,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
+      link: [{ rel: 'icon', type: 'image/png', href: "/favicon.ico" }],
       htmlAttrs: {
         lang: "en",
         class: "h-full",
