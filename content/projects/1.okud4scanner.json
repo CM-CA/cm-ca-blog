@@ -1,6 +1,6 @@
 {
     "name": "Okud4-Scan",
-    "url": "https://github.com/CM-CA/Okud4-Scan.git",
+    "url": "https://github.com/CM-CA/Okud4-Scan",
     "description": "Autoscaner para la busqueda de vulnerabilidades web",
     "status": "WIP",
     "opensource": true
