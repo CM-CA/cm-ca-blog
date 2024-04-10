@@ -20,6 +20,9 @@ useSeoMeta({
   description,
 });
 
-const { data: projects } = useFetch("https://api.github.com/users/cm-ca/repos");
+const { data: projects } = useFetch("https://api.github.com/users/cm-ca/repos",{
+  method: 'GET',
+
+});
 
 </script>

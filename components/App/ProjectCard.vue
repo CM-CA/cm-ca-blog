@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     class="flex items-end gap-4 group p-2 -m-2 rounded-lg"
-    :to="project.html_url"
+    to="project.svn_url"
     target="_blank"
     external
   >
@@ -16,7 +16,7 @@
       class="flex-1 border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-gray-700"
     ></div>
     <UAvatar
-      :src="project.owner.avatar_url"
+      src="https://avatars.githubusercontent.com/u/22884689?v=4"
       :ui="{ rounded: 'rounded z-10 relative' }"
       size="md"
       :alt="project.name"
