@@ -14,7 +14,7 @@
       Hola! soy CMCA aka. Okud4
     </h1>
     <p class="text-gray-900 dark:text-gray-400">
-      ¡Hola! Soy un apasionado programador junior que está obsesionado con la
+      Soy un apasionado programador junior que está obsesionado con la
       ciberseguridad y la protección en línea. Me encanta jugar con Python y
       JavaScript, y estoy siempre buscando nuevas formas de hacer que nuestros
       datos estén más seguros. Siempre estoy investigando sobre los últimos
