@@ -7,7 +7,7 @@
         :key="id"
         :project="project"
       />
-
+     
     </div>
   </main>
 </template>
