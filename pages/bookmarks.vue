@@ -28,9 +28,9 @@
 
 <script setup>
 const description =
-  "Awesome things I've found on the internet. This page is still WIP, I want to add search like bmrks.com";
+  "Aquí os dejaré cosas que encuentro por internet y me parecen interesantes.";
 useSeoMeta({
-  title: "Bookmarks | Camilo Couselo",
+  title: "Bookmarks | Camilo M. Couselo Alonso",
   description,
 });
 

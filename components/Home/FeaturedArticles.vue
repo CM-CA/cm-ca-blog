@@ -14,6 +14,7 @@
         to="/articles"
         variant="link"
         color="gray"
+        icon="i-heroicons-pencil-square"
       />
     </div>
   </div>

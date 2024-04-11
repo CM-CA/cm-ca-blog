@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="uppercase text-xs font-semibold text-gray-400 mb-4">FIND ME ON</h2>
+    <h2 class="uppercase text-xs font-semibold text-gray-400 mb-4">MIS REDES</h2>
     <div class="space-y-5">
       <NuxtLink
         v-for="link in links"
@@ -14,7 +14,7 @@
           {{ link.name }}
         </span>
         <div
-          class="flex-1 border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-gray-700"
+          class="flex-1 border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-green-700"
         ></div>
         <Icon :name="link.icon" class="w-6 h-6"></Icon>
       </NuxtLink>
@@ -33,6 +33,11 @@ const links = [
     name: "Linkedin",
     url: "https://www.linkedin.com/in/cm-ca/",
     icon: "mdi:linkedin",
+  },
+  {
+    name:"Okud4, Blog de Ciberseguridad",
+    url:"https://cm-ca.github.io/",
+    icon:"mdi:security"
   },
 ];
 </script>

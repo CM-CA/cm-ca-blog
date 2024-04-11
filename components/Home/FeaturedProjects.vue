@@ -16,6 +16,7 @@
         to= "/projects"
         variant="link"
         color="gray"
+        icon="i-heroicons-command-line"
       />
     </div>
   </div>
