@@ -26,10 +26,6 @@ useSeoMeta({
   description,
 });
 
-// Obtener proyectos
-
-
-
 const currentPage = ref(1);
 const itemsPerPage = 4;
 
@@ -38,7 +34,7 @@ let totalProjects = ref(0);
 let pageCount = ref(0);
 
 const fetchProjects = async () => {
-  const { pending, data } = useLazyFetch("https://api.github.com/users/cm-ca/repos", {
+  const { pending, data } = useFetch("https://api.github.com/users/cm-ca/repos", {
   method: 'GET',
   lazy: true,
 });
