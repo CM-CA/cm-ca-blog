@@ -1,10 +1,9 @@
 <template>
   <main class="min-h-screen">
     <AppHeader class="mb-12" title="Proyectos" :description="description" />
-    <div class="space-y-4" v-if="pending">Cargando...</div>
-    <div v-else>
+    
+ 
       <AppProjectCard v-for="(project, id) in paginatedProjects" :key="id" :project="project" />
-    </div>
 
     <div class="flex justify-center items-center my-8 px-3 ">
     <UPagination v-model="currentPage" :page-count="pageCount" :total="totalProjects" 
@@ -15,7 +14,6 @@
 
   </main>
 </template>
-
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 
@@ -34,17 +32,20 @@ let totalProjects = ref(0);
 let pageCount = ref(0);
 
 const fetchProjects = async () => {
-  const { pending, data } = useFetch("https://api.github.com/users/cm-ca/repos", {
+  const {data } = useFetch("https://api.github.com/users/cm-ca/repos", {
   method: 'GET',
   lazy: true,
 });
 
-  if (!pending.value) {
+  try {
+    await data;
     projects.value = data.value;
     totalProjects.value = projects.value.length;
     pageCount.value = Math.ceil(totalProjects.value / itemsPerPage);
+  } catch (err) {
+    console.error(err);
   }
-};
+}
 
 fetchProjects();
 
