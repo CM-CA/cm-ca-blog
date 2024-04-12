@@ -31,13 +31,12 @@ let projects = ref([]);
 let totalProjects = ref(0);
 let pageCount = ref(0);
 
-const fetchProjects = async () => {
+const fetchProjects = () => {
   const {data } = useFetch("https://api.github.com/users/cm-ca/repos", {
   method: 'GET',
 });
 
   try {
-    await data;
     projects.value = data.value;
     totalProjects.value = projects.value.length;
     pageCount.value = Math.ceil(totalProjects.value / itemsPerPage);
