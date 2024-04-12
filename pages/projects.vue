@@ -34,7 +34,6 @@ let pageCount = ref(0);
 const fetchProjects = async () => {
   const {data } = useFetch("https://api.github.com/users/cm-ca/repos", {
   method: 'GET',
-  lazy: true,
 });
 
   try {
