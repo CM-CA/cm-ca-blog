@@ -1,24 +1,24 @@
 <template>
   <main class="min-h-screen">
     <AppHeader class="mb-12" title="Proyectos" :description="description" />
-    
- 
+    <div class="space-y-4" v-if="pending">Cargando...</div>
+    <div v-else>
       <AppProjectCard v-for="(project, id) in paginatedProjects" :key="id" :project="project" />
-
-    <div class="flex justify-center items-center my-8 px-3 ">
-    <UPagination v-model="currentPage" :page-count="pageCount" :total="totalProjects" 
-    @change="fetchProjects"
-    :prev-button="{ icon: 'i-heroicons-arrow-small-left-20-solid', label: 'Prev', color: 'gray' }"
-    :next-button="{ icon: 'i-heroicons-arrow-small-right-20-solid', trailing: true, label: 'Next', color: 'gray' }"/>
     </div>
 
+    <div class="flex justify-center items-center my-8 px-3 ">
+      <UPagination v-model="currentPage" :page-count="pageCount" :total="totalProjects" 
+      @change="fetchProjects"
+      :prev-button="{ icon: 'i-heroicons-arrow-small-left-20-solid', label: 'Prev', color: 'gray' }"
+      :next-button="{ icon: 'i-heroicons-arrow-small-right-20-solid', trailing: true, label: 'Next', color: 'gray' }"/>
+    </div>
   </main>
 </template>
-<script setup lang="ts">
-import { ref, computed } from 'vue';
 
-const description =
-  "Aunque hasta la fecha no he tenido la oportunidad de trabajar en una compañia IT, siempre me gustó crear pequeños programas y páginas web. Aquí dejaré un listado de mi github.";
+<script setup lang="ts">
+import { ref, computed, onMounted } from 'vue';
+
+const description = "Aunque hasta la fecha no he tenido la oportunidad de trabajar en una compañia IT, siempre me gustó crear pequeños programas y páginas web. Aquí dejaré un listado de mi github.";
 useSeoMeta({
   title: "Proyectos | Camilo M. Couselo Alonso",
   description,
@@ -31,21 +31,20 @@ let projects = ref([]);
 let totalProjects = ref(0);
 let pageCount = ref(0);
 
-const fetchProjects = () => {
-  const {data } = useFetch("https://api.github.com/users/cm-ca/repos", {
-  method: 'GET',
-});
+const fetchProjects = async () => {
+  const { pending, data } = useLazyFetch("https://api.github.com/users/cm-ca/repos", {
+    method: 'GET',
+    lazy: true,
+  });
 
-  try {
+  if (!pending.value) {
     projects.value = data.value;
     totalProjects.value = projects.value.length;
     pageCount.value = Math.ceil(totalProjects.value / itemsPerPage);
-  } catch (err) {
-    console.error(err);
   }
-}
+};
 
-fetchProjects();
+onMounted(fetchProjects);
 
 const paginatedProjects = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage;
