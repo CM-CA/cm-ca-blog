@@ -24,3 +24,32 @@
     </div>
   </div>
 </template>
+
+<script>
+import { ref } from 'vue'
+import { useToast } from 'vue-toastification'
+
+export default {
+  setup() {
+    const email = ref('')
+    const toast = useToast()
+
+    const subscribe = async () => {
+      try {
+        // Aquí debes reemplazar `api.subscribeToNewsletter` con tu método real de la API.
+        await api.subscribeToNewsletter(email.value)
+        toast.success('¡Gracias por suscribirte a nuestra newsletter!')
+        email.value = ''
+      } catch (error) {
+        toast.error('Hubo un error al suscribirte a la newsletter. Por favor, inténtalo de nuevo.')
+      }
+    }
+
+    return {
+      email,
+      subscribe
+    }
+  }
+}
+</script>
+
