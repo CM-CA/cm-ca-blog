@@ -20,9 +20,9 @@
     </NuxtLink>
     <div>
       <UAvatar
-        src="https://avatars.githubusercontent.com/u/22884689?v=4"
+        src="/assets/favicons/mstile-150x150.png"
         :ui="{ rounded: 'rounded z-10 relative' }"
-        size="md"
+        size="xl"
         :alt="project.name"
       />
     </div>
@@ -36,5 +36,6 @@ defineProps({
     required: true,
   },
 });
+
 
 </script>
