@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     head: {
       link: [{ rel: 'icon', type: 'image/png', href: "/favicon.ico" }],
       htmlAttrs: {
-        lang: "en",
+        lang: "es",
         class: "h-full",
       },
       bodyAttrs: {
@@ -38,4 +38,5 @@ export default defineNuxtConfig({
       Inter: [400, 500, 600, 700, 800, 900],
     },
   },
+  ssr: false,
 });
