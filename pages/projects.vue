@@ -1,18 +1,24 @@
 <template>
   <main class="min-h-screen">
     <AppHeader class="mb-12" title="Proyectos" :description="description" />
-   
 
-   <div v-if="pending" class="flex flex-col items-center my-8 px-3">
-     <p class="mb-4">Cargando...</p>
-     <UProgress animation="elastic" />
+    <!--mensaje de carga de datos -->
+    <div v-if="pending" class="flex flex-col items-center my-8 px-3">
+      <h1 class="mb-4">Cargando...</h1>
+      <UProgress animation="elastic" />
     </div>
- 
-     <AppProjectCard
+
+    <div v-else-if="error || !projects">
+      <span class="text-red-500">Error al cargar los datos</span>
+    </div>
+
+    <div v-else>
+      <AppProjectCard
         v-for="(project, id) in projects"
         :key="id"
         :project="project"
       />
+    </div>
 
     <!-- 
      
@@ -47,13 +53,17 @@ useSeoMeta({
   description,
 });
 
-const { data: projects, pending } = await useLazyFetch("/api/projects", { 
+const {
+  data: projects,
+  pending,
+  error,
+} = await useLazyFetch("/api/projects", {
   method: "GET",
- headers: {
-   "Content-Type": "application/json",
-   "Accept": "application/json"
- },
-}
-);
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+});
 
+// Refrescar los datos de la pagina cuando se cambia de pagina
 </script>
