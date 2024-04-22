@@ -19,29 +19,6 @@
         :project="project"
       />
     </div>
-
-    <!-- 
-     
- <div class="flex justify-center items-center my-8 px-3">
-      <UPagination
-        v-model="page" 
-        :page-count="5"
-        :total="totalPages"
-        :prev-button="{
-          icon: 'i-heroicons-arrow-small-left-20-solid',
-          label: 'Prev',
-          color: 'gray',
-        }"
-        :next-button="{
-          icon: 'i-heroicons-arrow-small-right-20-solid',
-          trailing: true,
-          label: 'Next',
-          color: 'gray',
-        }"
-      />
-    </div>
-
--->
   </main>
 </template>
 

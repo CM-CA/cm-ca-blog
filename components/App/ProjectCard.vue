@@ -12,10 +12,10 @@
         </h3>
       </div>
       <div
-        class="flex-1 flex items-center border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-green-700"
+        class="flex-1 items-center border-b border-dashed border-gray-300 dark:border-gray-800 group-hover:border-green-700"
       ></div>
       <div class="max-w-sm">
-        <p class="text-gray-400 text-sm">{{ project.description }}</p>
+        <p class="text-gray-400 text-sm truncate hidden md:block">{{ project.description }}</p>
       </div>
     </NuxtLink>
     <div>
