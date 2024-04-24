@@ -1,7 +1,7 @@
 ---
 title: "Mi primerito día"
 description: "¿Quien soy?"
-published: 2024/04/23
+published: 2024/04/24
 slug: "mi-historia"
 ---
 
