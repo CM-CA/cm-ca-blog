@@ -1,4 +1,7 @@
 export default defineAppConfig({
+  plugins:{
+    'postcss-nesting': {},
+  },
   ui: {
     primary: "teal",
     gray: "neutral",
