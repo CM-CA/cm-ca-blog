@@ -4,6 +4,7 @@
       class="prose dark:prose-invert prose-blockquote:not-italic prose-pre:bg-gray-900 prose-img:ring-1 prose-img:ring-gray-200 dark:prose-img:ring-white/10 prose-img:rounded-lg">
       <ContentDoc v-slot="{ doc }" tag="article">
         <article>
+          <NuxtImg src="/img/banner.jpeg"/>
           <h1>{{ doc.title }}</h1>
           <ContentRenderer :value="doc" />
         </article>
@@ -22,8 +23,7 @@ useSeoMeta({
   description: 'Mi blog personal',
   ogDescription: 'Mi blog personal',
   ogUrl: `https://cm-ca.vercel.app/articles/${slug}`,
-  ogImage: 'https://cm-ca.vercel.app/assets/avatar.jpg',
-  icon: 'https://cm-ca.vercel.app/assets/favicons/mstile-150x150.png',
+  ogImage: '/img/banner.jpeg',
   twitterCard: 'summary_large_image',
   lang: 'es',
 });
