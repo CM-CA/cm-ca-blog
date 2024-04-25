@@ -9,6 +9,7 @@
         </article>
       </ContentDoc>
     </div>
+    <AppShareButton/>
   </main>
 </template>
 
@@ -16,7 +17,6 @@
 const route = useRoute();
 const { slug } = route.params;
 useSeoMeta({
-  twitterCard: "summary_large_image",
   articleAuthor: "Camilo M. Couselo Alonso",
 });
 </script>

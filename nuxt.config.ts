@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "@vueuse/nuxt",
     '@nuxtjs/i18n',
+    "@stefanobartoletti/nuxt-social-share"
   ],
   ui: {
     icons: ["heroicons", "lucide"],

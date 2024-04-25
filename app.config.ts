@@ -1,7 +1,7 @@
 export default defineAppConfig({
-  plugins:{
-    'postcss-nesting': {},
-  },
+  modules: [
+    '@stefanobartoletti/nuxt-social-share'
+  ],
   ui: {
     primary: "teal",
     gray: "neutral",
