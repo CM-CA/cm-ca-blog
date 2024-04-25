@@ -18,11 +18,11 @@ const route = useRoute();
 const { slug } = route.params;
 useSeoMeta({
   title: 'Okud4',
-  ogTitle: 'Okud4',
+  ogTitle: `Okud4 - ${slug}`,
   description: 'Mi blog personal',
   ogDescription: 'Mi blog personal',
   ogUrl: `https://cm-ca.vercel.app/articles/${slug}`,
-  ogImage: 'https://cm-ca.vercel.app/assets/favicons/mstile-150x150.png',
+  ogImage: 'https://cm-ca.vercel.app/assets/avatar.jpg',
   icon: 'https://cm-ca.vercel.app/assets/favicons/mstile-150x150.png',
   twitterCard: 'summary_large_image',
   lang: 'es',
