@@ -9,11 +9,7 @@
 </template>
 
 <script setup>
-  const shareLinkedin = useSocialShare({
-    network: 'linkedin',
-    title: 'Camilo M. Couselo Alonso', 
-    image: 'https://cm-ca.vercel.app/assets/favicons/mstile-150x150.png',
-});
+
 
 </script>
 
