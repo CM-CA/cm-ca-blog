@@ -10,7 +10,9 @@
         </article>
       </ContentDoc>
     </div>
-    <AppShareButton />
+      
+      
+
   </main>
 </template>
 
