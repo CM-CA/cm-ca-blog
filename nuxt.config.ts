@@ -1,5 +1,7 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+  },
   modules: [
     "@nuxt/ui",
     "nuxt-icon",
@@ -14,7 +16,8 @@ export default defineNuxtConfig({
     ['@nuxtjs/robots', { 
       UserAgent: '*',
       Disallow: '/',
-     }]
+     }],
+     'nuxt-gtag'
   ],
   ui: {
     icons: ["heroicons", "lucide"],
@@ -44,4 +47,11 @@ export default defineNuxtConfig({
     },
   },
   ssr: false,
+
+  gtag: {
+    id: 'G-P9V88JWYF3',
+    config: {
+      page_title: 'Camilo M. Couselo Alonso'
+    },
+  }
 });

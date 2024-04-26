@@ -16,6 +16,7 @@
     "@nuxtjs/google-fonts": "3.1.1",
     "@stefanobartoletti/nuxt-social-share": "^0.6.1",
     "nuxt": "^3.11.2",
+    "nuxt-gtag": "^2.0.5",
     "nuxt-icon": "0.6.7",
     "prettier": "3.1.1",
     "prettier-plugin-tailwindcss": "0.5.9",
