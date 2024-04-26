@@ -1,7 +1,4 @@
 export default defineAppConfig({
-  modules: [
-    '@stefanobartoletti/nuxt-social-share'
-  ],
   ui: {
     primary: "teal",
     gray: "neutral",

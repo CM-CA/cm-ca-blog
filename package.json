@@ -26,6 +26,7 @@
     "@nuxt/image": "1.1.0",
     "@nuxt/ui": "2.11.1",
     "@nuxtjs/i18n": "^8.3.0",
+    "@nuxtjs/robots": "^3.0.0",
     "vue-use-fixed-header": "^2.0.0"
   }
 }
