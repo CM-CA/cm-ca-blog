@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     ['@nuxtjs/robots', { 
       UserAgent: '*',
       Disallow: '/',
-      BlankLine: true
      }]
   ],
   ui: {
